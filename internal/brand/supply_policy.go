@@ -90,9 +90,3 @@ func CloneCatalog(snapshot CatalogSnapshot) CatalogSnapshot {
 	}
 	return clone
 }
-
-func productOriginSnapshot(listing ProductListing) ProductListing {
-	clone := listing
-	clone.IngredientLotIDs = nil
-	return clone
-}
