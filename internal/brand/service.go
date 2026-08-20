@@ -68,6 +68,8 @@ func (s *Service) CheckLotTrace(_ context.Context, lot IngredientLot, known map[
 }
 
 func (s *Service) CheckHighlandProduct(_ context.Context, listing ProductListing, lots map[string]IngredientLot) error {
+	listing = productOriginSnapshot(listing)
+
 	return ValidateHighlandProduct(listing, lots)
 }
 
